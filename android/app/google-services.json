@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "492236829481",
+    "firebase_url": "https://prueba-pm.firebaseio.com",
+    "project_id": "prueba-pm",
+    "storage_bucket": "prueba-pm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492236829481:android:015e187c15ab22a8bbbd38",
+        "android_client_info": {
+          "package_name": "com.example.ecommerceshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492236829481-le7jkfdud9nj2qucm6uhupsqcc1oolod.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ecommerceshop",
+            "certificate_hash": "fb5a33fffb74c6ae67b42cef838ee5bb79ca4fb2"
+          }
+        },
+        {
+          "client_id": "492236829481-5j79p4633edsgb1913d2qv13q96lnvej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK6LsPXavtI7C94pYzIx59gee4XtGRHLU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492236829481-5j79p4633edsgb1913d2qv13q96lnvej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
