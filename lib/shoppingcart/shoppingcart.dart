@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluttershopjt/pages/cart.dart';
 import '../pages/cart.dart';
 
 class ShoppingCart extends StatelessWidget {
