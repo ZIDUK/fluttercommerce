@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import '../home/home.dart';
 import '../pages/cart.dart';
-//import '../screen2/screen2.dart';
-//import './screen1.dart';
-//import '../screen3/screen3.dart'; 
-//import '../screen2/usuarios.dart';
-//import '../socketscreen/socketscreen.dart';
 
 class SideBar extends StatefulWidget {
   SideBarState createState() => new SideBarState();
