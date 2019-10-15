@@ -38,12 +38,35 @@ class _HomeState extends State<Home> {
           ShoppingCart(),
         ]    
       ),
-      bottomNavigationBar: CupertinoTabBar(
+     
+      drawer: 
+          SideBar(),
+      body: PageView(
+        controller: _pageController,
+        children: <Widget>[
+          HomeScreen(),
+          Cart(),
+          
+        ],
+        onPageChanged: (int index){
+          setState(() {
+           _currenTab = index; 
+          });          
+        },
+      ),
+
+       bottomNavigationBar: CupertinoTabBar(
         currentIndex: _currenTab,
         onTap: (int index){
           setState(() {
            _currenTab = index; 
           });
+
+          _pageController.animateToPage(
+            index, 
+            duration: Duration(milliseconds: 100), 
+            curve: Curves.easeIn,
+            );
 
         },
         activeColor: Colors.black,
@@ -79,26 +102,7 @@ class _HomeState extends State<Home> {
         ),
         ],
       ),
-      drawer: 
-          SideBar(),
-      body: PageView(
-        controller: _pageController,
-        children: <Widget>[
-          HomeScreen(),
-          Cart(),
-          
-        ],
-        onPageChanged: (int index){
-          setState(() {
-           _currenTab = index; 
-          });
-          _pageController.animateToPage(
-            index, 
-            duration: Duration(microseconds: 100), 
-            curve: Curves.easeIn,
-            );
-        },
-      ),
+
       /* ListView(
         children: <Widget>[
           CarouselJT(),

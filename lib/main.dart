@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
     builder: (BuildContext context, snapsshot){
       if (snapsshot.hasData){
         return Home();
-        print('desde home');
+      
       }else{
         return LoginScreen();
-        print('desde login screen');
+        
       }
     },
     );

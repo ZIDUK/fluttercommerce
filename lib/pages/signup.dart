@@ -26,6 +26,9 @@ _submit(){
    
   }
 }
+_submitGoogle(){
+  AuthService.googleSignup(context);
+}
 
   @override
   Widget build(BuildContext context) {
@@ -88,6 +91,24 @@ _submit(){
                     padding: EdgeInsets.all(10.0),
                     child: Text(
                         'Sign Up',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18.0,
+                      ),
+                    ),
+                  ),
+                  ),
+
+                  SizedBox(height: 20.0,),
+                  Container(
+                    width: 250.0,
+
+                  child: FlatButton(
+                    onPressed: _submitGoogle,
+                    color: Colors.red,
+                    padding: EdgeInsets.all(10.0),
+                    child: Text(
+                        'Sign Up con Google',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 18.0,

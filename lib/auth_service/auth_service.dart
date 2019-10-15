@@ -2,16 +2,19 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttershopjt/home/home.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import '../feed_screen.dart/feed_screen.dart';
 import '../pages/login.dart';
 
 class AuthService{
   static final _auth = FirebaseAuth.instance;
   static final _firestore = Firestore.instance;
+  
+  
 
 
   static void signUpUser (BuildContext context, String name, String email, String password) async{
-    print('Metodo de Sing up user');
+    
     try{
       AuthResult authResult = await _auth.createUserWithEmailAndPassword(
         email: email,
@@ -19,7 +22,7 @@ class AuthService{
 
       );
       FirebaseUser signedInUser = authResult.user;
-      print('revision metodo signup user');
+     
 
       if(signedInUser != null){
 
@@ -58,8 +61,23 @@ class AuthService{
     Navigator.push(context, MaterialPageRoute(builder: (context)=> Home()));    
     }catch(e){
         print(e);
-    }
-    
-    
+    }    
   }
+
+  static void googleSignup(BuildContext context) async{
+    GoogleSignIn _googleSignIn = GoogleSignIn(
+  scopes: [
+    'email',
+    'https://www.googleapis.com/auth/contacts.readonly',
+  ],
+);
+try {
+    await _googleSignIn.signIn();
+     Navigator.push(context, MaterialPageRoute(builder: (context)=> Home())); 
+  } catch (error) {
+    print(error);
+  }
+
+  }
+
 }
