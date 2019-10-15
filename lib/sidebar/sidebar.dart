@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../home/home.dart';
 import '../pages/cart.dart';
+import '../auth_service/auth_service.dart';
+import '../pages/login.dart';
 
 class SideBar extends StatefulWidget {
   SideBarState createState() => new SideBarState();
@@ -106,6 +108,16 @@ class SideBarState extends State<SideBar> {
             },
           ),
           ListTile(
+            title: Text('Logout'),
+            trailing: Icon(Icons.exit_to_app),
+            onTap: (){
+              Navigator.push(context,
+               MaterialPageRoute(builder: (context) => LoginScreen()));
+               AuthService.logout(context);
+            },
+          ),
+
+           ListTile(
             title: Text('Close'),
             trailing: Icon(Icons.cancel),
             onTap: () => Navigator.of(context).pop(),

@@ -54,10 +54,12 @@ class AuthService{
 
   static void login(BuildContext context, String email, String password) async {
     try{
-    await _auth.signInWithEmailAndPassword(email: email, password: password);    
+    await _auth.signInWithEmailAndPassword(email: email, password: password);
+    Navigator.push(context, MaterialPageRoute(builder: (context)=> Home()));    
     }catch(e){
         print(e);
     }
-    Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen()));
+    
+    
   }
 }
